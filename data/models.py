@@ -61,7 +61,7 @@ class Question(models.Model):
         return reverse('questions_url_out', args=[str(self.id)])
 
 class Comment(models.Model):
-    video = models.ForeignKey(Video,on_delete=models.CASCADE,related_name='comments', null=True, blank=True)
+    video = models.ForeignKey('Video',on_delete=models.CASCADE,related_name='comments', null=True, blank=True)
     commenting = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     active = models.BooleanField(default=True)

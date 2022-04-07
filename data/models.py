@@ -70,7 +70,7 @@ class Comment(models.Model):
         ordering = ['created_on']
         
     def _str_(self):
-        return 'comment {}'.format(self.commenting)
+        return self.commenting
       
 class Image(models.Model):
     title = models.CharField(max_length = 50, null=False, blank=False)
